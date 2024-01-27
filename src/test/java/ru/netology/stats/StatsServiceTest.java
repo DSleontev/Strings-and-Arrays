@@ -9,18 +9,18 @@ public class StatsServiceTest {
 
     public void salesamounttest() {
         StatsService service = new StatsService();
-        int[] sales = {1, 2, 3, 4, 5};
-        int expected = 15;
-        int adctual = service.salesamount(sales);
+        long[] sales = {1, 2, 3, 4, 5};
+        long expected = 15;
+        long adctual = service.salesamount(sales);
         Assertions.assertEquals(expected, adctual);
     }
 
     @Test
     public void averagesalesamounttest() {
         StatsService service = new StatsService();
-        int[] sales = {1, 2, 3, 4, 5};
-        int expected = 3;
-        int adctual = service.averagesalesamount(sales);
+        long[] sales = {1, 2, 3, 4, 5};
+        long expected = 3;
+        long adctual = service.averagesalesamount(sales);
         Assertions.assertEquals(expected, adctual);
 
     }
@@ -28,9 +28,9 @@ public class StatsServiceTest {
     @Test
     public void maxSalestest() {
         StatsService service = new StatsService();
-        int[] sales = {1, 2, 3, 14, 5};
-        int expected = 4;
-        int adctual = service.maxSales(sales);
+        long[] sales = {1, 2, 3, 14, 5};
+        long expected = 4;
+        long adctual = service.maxSales(sales);
         Assertions.assertEquals(expected, adctual);
 
     }
@@ -38,9 +38,9 @@ public class StatsServiceTest {
     @Test
     public void minSalestest() {
         StatsService service = new StatsService();
-        int[] sales = {10, 2, 3, 4, 5};
-        int expected = 2;
-        int adctual = service.minSales(sales);
+        long[] sales = {10, 2, 3, 4, 5};
+        long expected = 2;
+        long adctual = service.minSales(sales);
         Assertions.assertEquals(expected, adctual);
 
     }
@@ -48,9 +48,9 @@ public class StatsServiceTest {
     @Test
     public void Belowaveragetest() {
         StatsService service = new StatsService();
-        int[] sales = {1, 2, 3, 4, 5};
-        int expected = 2;
-        int adctual = service.Belowaverage(sales);
+        long[] sales = {1, 2, 3, 4, 5};
+        long expected = 2;
+        long adctual = service.Belowaverage(sales);
         Assertions.assertEquals(expected, adctual);
 
     }
@@ -58,9 +58,9 @@ public class StatsServiceTest {
     @Test
     public void aboveaveragetest() {
         StatsService service = new StatsService();
-        int[] sales = {1, 2, 3, 4, 5, 6, 7};
-        int expected = 3;
-        int adctual = service.aboveaverage(sales);
+        long[] sales = {1, 2, 3, 4, 5, 6, 7};
+        long expected = 3;
+        long adctual = service.aboveaverage(sales);
         Assertions.assertEquals(expected, adctual);
 
     }

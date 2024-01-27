@@ -3,25 +3,25 @@ package ru.netology.stats;
 public class StatsService {
 
 
-    public int salesamount(int[] sales) {
-        int sum = 0;
+    public long salesamount(long[] sales) {
+        long sum = 0;
         for (int i = 0; i < sales.length; i++) {
-            sum = (int) (sum + sales[i]);
+            sum = (sum + sales[i]);
         }
         return sum;
     }
 
-    public int averagesalesamount(int[] sales) {
-        int sum = 0;
+    public long averagesalesamount(long[] sales) {
+        long sum = 0;
         for (int i = 0; i < sales.length; i++) {
             sum = (int) (sum + sales[i]);
         }
-        int avsa = sum / sales.length;
+        long avsa = sum / sales.length;
         return avsa;
 
     }
 
-    public int maxSales(int[] sales) {
+    public long maxSales(long[] sales) {
         int maxMonth = 0;
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] >= sales[maxMonth]) {
@@ -32,7 +32,7 @@ public class StatsService {
 
     }
 
-    public int minSales(int[] sales) {
+    public long minSales(long[] sales) {
         int minMonth = 0;
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] <= sales[minMonth]) {
@@ -42,15 +42,15 @@ public class StatsService {
         return minMonth + 1;
     }
 
-    public int Belowaverage(int[] sales) {
+    public long Belowaverage(long[] sales) {
 
-        int sum = 0;
+        long sum = 0;
         for (int i = 0; i < sales.length; i++) {
             sum = (int) (sum + sales[i]);
         }
-        int avsa = sum / sales.length;
+        long avsa = sum / sales.length;
 
-        int BelowaMonth = 0;
+        long BelowaMonth = 0;
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] < avsa) {
                 BelowaMonth = BelowaMonth + 1;
@@ -60,13 +60,13 @@ public class StatsService {
     }
 
 
-    public int aboveaverage(int[] sales) {
+    public long aboveaverage(long[] sales) {
 
-        int sum = 0;
+        long sum = 0;
         for (int i = 0; i < sales.length; i++) {
             sum = (int) (sum + sales[i]);
         }
-        int avsa = sum / sales.length;
+        long avsa = sum / sales.length;
 
         int AboveMonth = 0;
         for (int i = 0; i < sales.length; i++) {
