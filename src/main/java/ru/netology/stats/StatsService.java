@@ -12,12 +12,13 @@ public class StatsService {
     }
 
     public long averagesalesamount(long[] sales) {
-        long sum = 0;
-        for (int i = 0; i < sales.length; i++) {
-            sum = (int) (sum + sales[i]);
-        }
-        long avsa = sum / sales.length;
-        return avsa;
+//        long sum = 0;
+//        for (int i = 0; i < sales.length; i++) {
+//            sum = (int) (sum + sales[i]);
+//        }
+//        long avsa = sum / sales.length;
+//        return avsa;
+        return salesamount(sales) / sales.length;
 
     }
 
@@ -44,15 +45,15 @@ public class StatsService {
 
     public long Belowaverage(long[] sales) {
 
-        long sum = 0;
-        for (int i = 0; i < sales.length; i++) {
-            sum = (int) (sum + sales[i]);
-        }
-        long avsa = sum / sales.length;
+//        long sum = 0;
+//        for (int i = 0; i < sales.length; i++) {
+//            sum = (int) (sum + sales[i]);
+//        }
+//        long avsa = sum / sales.length;
 
         long BelowaMonth = 0;
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] < avsa) {
+            if (sales[i] < averagesalesamount(sales)) {
                 BelowaMonth = BelowaMonth + 1;
             }
         }
@@ -62,15 +63,15 @@ public class StatsService {
 
     public long aboveaverage(long[] sales) {
 
-        long sum = 0;
-        for (int i = 0; i < sales.length; i++) {
-            sum = (int) (sum + sales[i]);
-        }
-        long avsa = sum / sales.length;
+//        long sum = 0;
+//        for (int i = 0; i < sales.length; i++) {
+//            sum = (int) (sum + sales[i]);
+//        }
+//        long avsa = sum / sales.length;
 
         int AboveMonth = 0;
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] > avsa) {
+            if (sales[i] > averagesalesamount(sales)) {
                 AboveMonth = AboveMonth + 1;
             }
         }
