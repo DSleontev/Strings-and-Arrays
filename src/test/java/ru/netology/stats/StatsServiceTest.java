@@ -50,7 +50,7 @@ public class StatsServiceTest {
         StatsService service = new StatsService();
         long[] sales = {1, 2, 3, 4, 5};
         long expected = 2;
-        long adctual = service.Belowaverage(sales);
+        long adctual = service.belowaverage(sales);
         Assertions.assertEquals(expected, adctual);
 
     }

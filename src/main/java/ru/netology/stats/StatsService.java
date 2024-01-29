@@ -16,11 +16,9 @@ public class StatsService {
 //        for (int i = 0; i < sales.length; i++) {
 //            sum = (int) (sum + sales[i]);
 //        }
-//        long avsa = sum / sales.length;
-//        return avsa;
         return salesamount(sales) / sales.length;
-
     }
+
 
     public long maxSales(long[] sales) {
         int maxMonth = 0;
@@ -43,7 +41,7 @@ public class StatsService {
         return minMonth + 1;
     }
 
-    public long Belowaverage(long[] sales) {
+    public long belowaverage(long[] sales) {
 
 //        long sum = 0;
 //        for (int i = 0; i < sales.length; i++) {
@@ -51,13 +49,14 @@ public class StatsService {
 //        }
 //        long avsa = sum / sales.length;
 
-        long BelowaMonth = 0;
+        long belowaMonth = 0;
+        long average = averagesalesamount(sales);
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] < averagesalesamount(sales)) {
-                BelowaMonth = BelowaMonth + 1;
+            if (sales[i] < average) {
+                belowaMonth = belowaMonth + 1;
             }
         }
-        return BelowaMonth;
+        return belowaMonth;
     }
 
 
@@ -68,14 +67,14 @@ public class StatsService {
 //            sum = (int) (sum + sales[i]);
 //        }
 //        long avsa = sum / sales.length;
-
-        int AboveMonth = 0;
+        long average = averagesalesamount(sales);
+        int aboveMonth = 0;
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] > averagesalesamount(sales)) {
-                AboveMonth = AboveMonth + 1;
+            if (sales[i] > average) {
+                aboveMonth = aboveMonth + 1;
             }
         }
-        return AboveMonth;
+        return aboveMonth;
     }
 
 
